@@ -1,0 +1,32 @@
+body {
+  background-color: gray;
+  color: white;
+}
+#container {
+  height: 97vh;
+  border: 1px red solid;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#controls {
+  border: 1px blue solid;
+  width: 11rem;
+  height: 95%;
+}
+#grid-container {
+  width: 500px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px white solid;
+}
+.grid-item {
+  border: 1px white solid;
+  width: auto;
+  height: 10px;
+  flex: 1 1 auto;
+  aspect-ratio: 1 / 1;
+}
