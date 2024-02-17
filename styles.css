@@ -1,32 +1,78 @@
 body {
-  background-color: gray;
-  color: white;
+  background-color: rgb(224, 220, 220);
+  color: black;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+}
+#extra-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
 }
 #container {
   height: 97vh;
-  border: 1px red solid;
-  background-color: black;
+  background-color: rgb(224, 220, 220);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
 #controls {
-  border: 1px blue solid;
+  border: 1px black solid;
   width: 11rem;
   height: 95%;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
 #grid-container {
   width: 500px;
+  height: 500px;
   aspect-ratio: 1 / 1;
   display: flex;
-  flex-wrap: wrap;
-  border: 1px white solid;
+  flex-flow: row wrap;
+  border: 1px black solid;
+  background-color: white;
 }
-.grid-item {
-  border: 1px white solid;
-  width: auto;
-  height: 10px;
-  flex: 1 1 auto;
-  aspect-ratio: 1 / 1;
+.grid-item:hover {
+  background-color: red;
+}
+#grid-input {
+  width: 4.3rem;
+}
+#color-input {
+  height: 100px;
+  width: 100px;
+  border: 0;
+  padding: 0;
+  flex: 0 0 auto;
+}
+#color-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid black;
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+#one {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  gap: 5rem;
+}
+#footer > p > a {
+  color: rgb(201, 7, 7);
+}
+#footer > p > a:hover {
+  color: black;
 }
