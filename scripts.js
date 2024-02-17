@@ -2,7 +2,6 @@ const inputField = document.querySelector('#grid-input');
 const colorInput = document.querySelector('#color-input');
 let userColor = 'black';
 colorInput.addEventListener('change', () => {
-  console.log(colorInput.value);
   userColor = colorInput.value;
 });
 const gridContainer = document.querySelector('#grid-container');
