@@ -1,4 +1,10 @@
 const inputField = document.querySelector('#grid-input');
+const colorInput = document.querySelector('#color-input');
+let userColor = 'black';
+colorInput.addEventListener('change', () => {
+  console.log(colorInput.value);
+  userColor = colorInput.value;
+});
 const gridContainer = document.querySelector('#grid-container');
 inputField.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
@@ -34,6 +40,7 @@ function createGrid(x) {
     div.classList = 'grid-item';
     gridContainer.appendChild(div);
   }
+  addColor();
 }
 function clearGrid(userInput) {
   const div = document.querySelectorAll('.grid-item');
@@ -42,4 +49,13 @@ function clearGrid(userInput) {
   });
   gridUsed = 0;
   createGrid(userInput);
+}
+function addColor() {
+  const div = document.querySelectorAll('.grid-item');
+  div.forEach((e) => {
+    e.addEventListener('mouseover', colorSelector);
+  });
+}
+function colorSelector(el) {
+  el.target.style.backgroundColor = `${userColor}`;
 }
